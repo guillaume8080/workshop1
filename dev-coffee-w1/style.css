@@ -1,0 +1,56 @@
+
+.navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom:1%;
+}
+
+.title{
+    font-size:x-large;
+    font-weight: bold;
+    color: #e74421;
+
+}
+
+.lienNavBar{
+    font-weight: bold;
+    color: 	#2d2d2d;
+    margin-left:1%;
+}
+
+.wrapperListOfCoffee{
+    display:flex;
+    flex-direction: row;
+
+}
+.coffeeWrapper{
+    display: flex;
+    flex-direction: column;
+    height:40%;
+    width:33%;
+    margin-left: 1%;
+
+}
+.myPicture{
+    border-radius: 25px 25px 0 0;
+    padding-bottom: 3%;
+    padding-top: 1%;
+}
+
+.mylabel{
+    padding-bottom: 3%;
+    font-size:large;
+    width:25%;
+    margin-left: 32.5%;
+    font-weight: bold;
+}
+
+.myButton{
+    width : 25%;
+    border-radius: 50px;
+    margin-left: 32.5%;
+    background-color:#e74421;
+    height: 3em;
+    color:white;
+}

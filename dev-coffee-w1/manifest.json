@@ -1,0 +1,25 @@
+{
+  "name": "myOwnPwa",
+  "short_name": "mypwa",
+  "description": "my own pwa",
+  "start_url" : "http://localhost:8000",
+  "id" : "/",
+  "display" : "standalone",
+  "orientation" : "portrait",
+  "theme_color" : "#808080",
+  "background_color" : "#808080",
+  "icons" : [
+    {
+      "src" : "./Images/squareIcon.png",
+      "sizes" : "225x225",
+      "type" : "image/png",
+      "purpose" : "any"
+    },
+    {
+      "src" : "./Images/squareIcon.png",
+      "sizes" : "225x225",
+      "type" : "image/png"
+    }
+
+  ]
+}
