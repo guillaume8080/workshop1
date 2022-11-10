@@ -6,7 +6,7 @@
  */
 
 
-const {JsonDB, Config} = require('node-json-db');
+const {JsonDB, Config} = require('node-json-db')
 module.exports = {
 
   import: {Config: Config, JsonDB: JsonDB},
@@ -15,33 +15,22 @@ module.exports = {
 
 
     // var axios = require('axios');
-  const quizzes = {
-    "quizz": [
-      {
-        "id": "1",
-        "question" : "can I do it ?",
-        "response" : "it seems"
-      },
-      {
-        "id" : "2",
-        "question" : "can I do it ?",
-        "response" : "it seems"
-      }
-    ]
-  }
-  ;
 
-    var db = new JsonDB(new Config("../persistence/test.json", true, false, '/'));
+
+    var db = new JsonDB(new Config("mybase.json", false, true, '/'));
 
     // await db.push("/test1","super test");
-    await db.delete("/");
+    // await db.delete("/");
 
-    await db.push("0" ,quizzes , false );
-
+    // await db.push("0" ,quizzes , false );
+    // await db.save();
     var data = await db.getData("/");
     console.log(data);
 
-    console.log("les lignes de dbjson ont ete executees");
+    console.log(data.quizz[0].question);
+
+
+  res.redirect("/jeu1");
 
 
   }
