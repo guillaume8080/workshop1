@@ -2,13 +2,21 @@
   "quizz": [
     {
       "id": "1",
-      "question" : "can I do it ?",
-      "response" : "it seems"
+      "imagesrc" : "",
+      "responses" : ["Albert Einstein","Isaac Newton","Gallilée","Marie Curry"],
+      "idTrue" : 1
     },
     {
-      "id" : "2",
-      "question" : "can I do it ?",
-      "response" : "it seems"
+      "id": "2",
+      "imagesrc" : "",
+      "responses" : ["Samuel Lee Jackson","Tom Hanks","Will Smith","Denzel Washington"],
+      "idTrue" : 2
+    },
+    {
+      "id": "3",
+      "imagesrc" : "",
+      "responses" : ["Aretha Franklin","Isaac Newton","Gallilée","Marie Curry"],
+      "idTrue" : 3
     }
   ]
 }
