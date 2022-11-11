@@ -24,10 +24,6 @@ module.exports = {
     if(scoreCourant == undefined){
       scoreCourant = 0;
     }
-    else{
-      scoreCourant++;
-    }
-
 
 
     const idTrueResponse = 1;
@@ -47,7 +43,8 @@ module.exports = {
     return res.view('pages/jeu1' , { leScore: scoreCourant , lIdDuQuizz : idquizz , lesReponses: responses , idVraiReponse: idTrueResponse});
     // res.redirect("/jeu1");
 
-
   }
+
+
 };
 

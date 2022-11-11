@@ -33,11 +33,19 @@
 <script>
 
     function goToControllerOnGoodResponse(){
-      const score = document.getElementById("scoreActuel").value;
+      let score = document.getElementById("scoreActuel").value;
+      score++;
       const idquizz = document.getElementById("idquizz").value;
       urlToRequest = "/mycontroller/" + score + "/" + idquizz ;
       window.location.replace(urlToRequest);
 
+    }
+
+    function goToControllerOnBadResponse(){
+      let score = document.getElementById("scoreActuel").value;
+      const idquizz = document.getElementById("idquizz").value;
+      urlToRequest = "/mycontroller/" + score + "/" + idquizz ;
+      window.location.replace(urlToRequest);
     }
 
     function checkResponse1(){
@@ -54,7 +62,7 @@
       }
       if(myRepId != idFromRadioButton){
         document.getElementById("divChoix1").setAttribute("class","falseResponse");
-
+        setTimeout("goToControllerOnBadResponse()" , 2000);
       }
 
     }
@@ -69,10 +77,11 @@
 
       if(myRepId == idFromRadioButton){
         document.getElementById("divChoix2").setAttribute("class","goodResponse");
+        setTimeout("goToControllerOnGoodResponse()" ,2000);
       }
       if(myRepId != idFromRadioButton){
         document.getElementById("divChoix2").setAttribute("class","falseResponse");
-
+        setTimeout("goToControllerOnBadResponse()" , 2000);
       }
 
     }
@@ -87,10 +96,11 @@
 
       if(myRepId == idFromRadioButton){
         document.getElementById("divChoix3").setAttribute("class","goodResponse");
+        setTimeout("goToControllerOnGoodResponse()" ,2000);
       }
       if(myRepId != idFromRadioButton){
         document.getElementById("divChoix3").setAttribute("class","falseResponse");
-
+        setTimeout("goToControllerOnBadResponse()" , 2000);
       }
 
     }
@@ -105,17 +115,13 @@
 
       if(myRepId == idFromRadioButton){
         document.getElementById("divChoix4").setAttribute("class","goodResponse");
+        setTimeout("goToControllerOnGoodResponse()" ,2000);
       }
       if(myRepId != idFromRadioButton){
         document.getElementById("divChoix4").setAttribute("class","falseResponse");
-
+        setTimeout("goToControllerOnBadResponse()" , 2000);
       }
 
     }
-
-
-
-
-
 </script>
 
