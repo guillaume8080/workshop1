@@ -25,14 +25,17 @@ module.exports = {
       scoreCourant = 0;
     }
 
-    const score2 = req.params.score;
+
+
+    var db = new JsonDB(new Config("mybase.json", true, true, '/'));
+    var data = await db.getData("/");
 
     if(idquizz > 2 ){
-      res.view('pages/end');
+      const recordedScore = await db.getData("/score");
+      const scoreToWrite = Number(recordedScore) + Number(scoreCourant);
+      await db.push("/score", scoreToWrite , true);
+      return res.view('pages/end');
     }
-
-    var db = new JsonDB(new Config("mybase.json", false, true, '/'));
-    var data = await db.getData("/");
 
     const myImage = data.quizz[idquizz].imagesrc;
     const idTrueResponse = data.quizz[idquizz].idTrue;
