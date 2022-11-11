@@ -27,6 +27,9 @@ module.exports = {
 
     const score2 = req.params.score;
 
+    if(idquizz > 2 ){
+      res.view('pages/end');
+    }
 
     var db = new JsonDB(new Config("mybase.json", false, true, '/'));
     var data = await db.getData("/");
