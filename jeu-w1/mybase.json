@@ -2,19 +2,19 @@
   "quizz": [
     {
       "id": "0",
-      "imagesrc" : "",
+      "imagesrc" : "http://localhost:1337/images/alberteinstein.jpeg",
       "responses" : ["Albert Einstein","Isaac Newton","Gallilée","Marie Curry"],
       "idTrue" : 1
     },
     {
       "id": "1",
-      "imagesrc" : "",
-      "responses" : ["Samuel Lee Jackson","Tom Hanks","Will Smith","Denzel Washington"],
+      "imagesrc" : "http://localhost:1337/images/samuelleejackson.jpeg",
+      "responses" : ["Tom Hanks", "Samuel Lee Jackson" ,"Will Smith","Denzel Washington"],
       "idTrue" : 2
     },
     {
       "id": "2",
-      "imagesrc" : "",
+      "imagesrc" : "http://localhost:1337/images/mariecurry.jpeg",
       "responses" : ["Aretha Franklin","Isaac Newton","Gallilée","Marie Curry"],
       "idTrue" : 3
     }

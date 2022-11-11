@@ -25,23 +25,19 @@ module.exports = {
       scoreCourant = 0;
     }
 
-
-    const idTrueResponse = 1;
     const score2 = req.params.score;
 
 
     var db = new JsonDB(new Config("mybase.json", false, true, '/'));
     var data = await db.getData("/");
-    console.log(data);
-    console.log(data.quizz[0].question);
-    const responses = ["ceci est une connerie", "ceci est une connerie","ceci est une connerie","ceci est une connerie"];
 
+    const myImage = data.quizz[idquizz].imagesrc;
+    const idTrueResponse = data.quizz[idquizz].idTrue;
+    const responses = data.quizz[idquizz].responses;
 
     // await db.push("/test1","super test");
     // await db.delete("/");
-    // return  res.view('pages/event/createAddress' , {leDebut: debut, leLibelle:libelle , laFin:fin , collectionAdresses:labelsReturned });
-    return res.view('pages/jeu1' , { leScore: scoreCourant , lIdDuQuizz : idquizz , lesReponses: responses , idVraiReponse: idTrueResponse});
-    // res.redirect("/jeu1");
+    return res.view('pages/jeu1' , { leScore: scoreCourant , lIdDuQuizz : idquizz , imageSrc: myImage ,lesReponses: responses , idVraiReponse: idTrueResponse});
 
   }
 
