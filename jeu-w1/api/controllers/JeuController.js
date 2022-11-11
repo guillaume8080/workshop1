@@ -34,7 +34,8 @@ module.exports = {
       const recordedScore = await db.getData("/score");
       const scoreToWrite = Number(recordedScore) + Number(scoreCourant);
       await db.push("/score", scoreToWrite , true);
-      return res.view('pages/end');
+
+      return res.view('pages/end' , {leScoreCourant: scoreCourant , leCumul : scoreToWrite} );
     }
 
     const myImage = data.quizz[idquizz].imagesrc;
