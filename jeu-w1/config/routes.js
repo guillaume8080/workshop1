@@ -21,7 +21,8 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
   '/jeu1' : {view : 'pages/jeu1'},
-  '/controller1' : {controller :"jeuController" , action :"testJsonDB" }
+  '/controller1' : {controller :"jeuController" , action :"testJsonDB" },
+  "/mycontroller/:score/:idquizz" : {controller: "jeuController"  , action :"testJsonDB"}
 
   /***************************************************************************
   *                                                                          *

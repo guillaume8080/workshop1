@@ -26,9 +26,19 @@
         <label style="margin-top:6px">1:00</label>
     </div>
     <input id="valueResp"  type="hidden" value="<%= idVraiReponse%>">
+    <input id="scoreActuel"  type="hidden" value="<%= leScore%>">
+    <input id="idquizz"  type="hidden" value="<%= lIdDuQuizz%>">
 
 </div>
 <script>
+
+    function goToControllerOnGoodResponse(){
+      const score = document.getElementById("scoreActuel").value;
+      const idquizz = document.getElementById("idquizz").value;
+      urlToRequest = "/mycontroller/" + score + "/" + idquizz ;
+      window.location.replace(urlToRequest);
+
+    }
 
     function checkResponse1(){
 
@@ -40,6 +50,7 @@
 
       if(myRepId == idFromRadioButton){
         document.getElementById("divChoix1").setAttribute("class","goodResponse");
+        setTimeout("goToControllerOnGoodResponse()" ,2000);
       }
       if(myRepId != idFromRadioButton){
         document.getElementById("divChoix1").setAttribute("class","falseResponse");
