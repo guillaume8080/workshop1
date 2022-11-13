@@ -1,0 +1,36 @@
+<form id="myForm" >
+    <input id="login" type="text" >
+    <input id="password" type="text">
+    <button type="submit" >SignUp</button>
+</form>
+<script>
+
+
+  const TheForm = document.getElementById("myForm");
+  TheForm.addEventListener("submit", (e) =>{
+
+    const login = document.getElementById("login").value;
+    const password = document.getElementById("password").value;
+
+    const formData = new FormData();
+    formData.append("login" , login);
+    formData.append("pw" , password);
+
+
+    e.preventDefault();
+
+
+    const requete = new XMLHttpRequest();
+    requete.open("post" ,"/recordUser");
+    requete.onload = function (){
+
+
+    }
+
+    requete.send(formData);
+
+
+
+  });
+</script>
+
